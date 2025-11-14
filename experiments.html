@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JP Davalos - Experiments</title>
+</head>
+
+<body>
+  <audio src="assets/file_example_MP3_1MG.mp3" controls></audio>
+  <video src="assets/file_example_WEBM_640_1_4MB.webm" controls></video>
+  <picture>
+    <source srcset="assets/722.png" type="image/png" media="(min-width: 800px)" />
+    <img src="assets/722.png" alt="Example image" width="400" height="300" />
+  </picture>
+
+  <canvas id="myCanvas" width="200" height="100">
+    Your browser does not support the canvas element.
+  </canvas>
+
+  <script>
+    const ctx = document.getElementById('myCanvas').getContext('2d');
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(20, 20, 150, 60);
+  </script>
+
+  <template id="greeting-template">
+    <article>
+      <h2>Hello!</h2>
+      <p>This content is inside a &lt;template&gt; element and won’t be displayed yet.</p>
+    </article>
+  </template>
+
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="E equals m c squared">
+    <mi>E</mi>
+    <mo>=</mo>
+    <mi>m</mi>
+    <msup>
+      <mi>c</mi>
+      <mn>2</mn>
+    </msup>
+  </math>
+
+  <p>Developers could not make use of the MathML because it was not supported by all browsers until recently. This change came around 2023 despite MathML existing since the early 2000s. </p>
+</body>
+
+</html>

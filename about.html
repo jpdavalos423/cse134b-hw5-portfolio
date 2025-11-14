@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JP Davalos - About</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li>
+            <u><a href="./about.html">About</a></u>
+          </li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li>
+            <label for="contact-toggle" class="navbar-contact-link"
+              >Contact</label
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <picture>
+            <source
+            srcset="
+              assets/profile-picture-200w.webp 200w,
+              assets/profile-picture-250w.webp 250w
+            "
+            sizes="(max-width: 768px) 200px, 250px"
+            type="image/webp"
+          >
+        
+          <source
+            srcset="
+              assets/profile-picture-200w.jpg 200w,
+              assets/profile-picture-250w.jpg 250w
+            "
+            sizes="(max-width: 768px) 200px, 250px"
+            type="image/jpeg"
+          >
+        
+          <img
+            src="assets/profile-picture-250w.jpg"
+            alt="A professional headshot of JP Davalos."
+          >
+        </picture>
+        <article>
+          <h2>Who am I?</h2>
+          <p>
+            I am a third year student at UC San Diego studying Computer Science.
+            I study various subjects including software development, frontend
+            development, web design, and machine learning. In my free time, I
+            like playing music with my friends, lifting, and running.
+          </p>
+        </article>
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+        <ol>
+          <li>
+            <b>UC San Diego</b> - B.S. Computer Science - <i>(2023 - 2027)</i>
+          </li>
+          <li>
+            <ul>
+              <li>Regent's Scholar</li>
+              <li>
+                Relevant Coursework: Data Structures and Algorithms, Software
+                Engineering, Computer Systems
+              </li>
+              <li>GPA: 3.75</li>
+            </ul>
+          </li>
+
+          <li><b>Turlock High School</b> - <i>(2019 - 2023)</i></li>
+          <li>
+            <ul>
+              <li>Rank 3/595</li>
+              <li>
+                AP Courses: Computer Science A, Calculus BC, Statistics and more
+              </li>
+              <li>GPA: 4.84</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="experience">
+        <h2>Experience</h2>
+        <ol>
+          <li>
+            <b>Software and Data Engineering Researcher</b> -
+            <em>UC San Diego</em>
+          </li>
+          <li>
+            <ul>
+              <li>
+                Engineered a Python Selenium web scraping pipeline processing
+                <strong>1,044</strong> articulation agreements from
+                <strong>115 CCCs</strong>.
+              </li>
+              <li>
+                Developed a Python transfer pathway generator that validates
+                prerequisites and produces term-by-term schedules.
+              </li>
+              <li>
+                Optimized data pipelines to detect credit loss, prerequisite
+                bottlenecks, and articulation gaps, improving efficiency.
+              </li>
+            </ul>
+          </li>
+
+          <li><b>Software Engineering Intern</b> - <em>KSDT Radio</em></li>
+          <li>
+            <ul>
+              <li>
+                Rebuilt legacy PHP/HTML site in React and Node.js, cutting load
+                times by
+                <strong>40%</strong>
+                and improving maintainability.
+              </li>
+              <li>
+                Built responsive UI, integrated multimedia streaming, and
+                automated email workflows, boosting engagement
+                <strong>25%</strong>.
+              </li>
+              <li>
+                Collaborated with a team of interns to ensure timely project
+                completion
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <b>Machine Learning Research Assistant</b> - <em>UC San Diego</em>
+          </li>
+          <li>
+            <ul>
+              <li>
+                Analyzed classification robustness using Python, comparing
+                Perceptron performance on incomplete data sets.
+              </li>
+              <li>
+                Developed scripts to simulate missing data sets, validating
+                model behavior and displaying performance metrics.
+              </li>
+              <li>
+                Automated data preprocessing and evaluation pipelines, reducing
+                manual workload and speeding up experiments.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <input type="checkbox" id="contact-toggle" class="contact-checkbox" />
+
+      <dialog id="contactDialog">
+        <form method="post" action="/send-message">
+          <fieldset>
+            <legend>Let's get in touch</legend>
+
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+
+            <div class="form-actions">
+              <button type="submit">Send Message</button>
+              <button type="button">Cancel</button>
+            </div>
+          </fieldset>
+        </form>
+      </dialog>
+      <span>Copyright &copy; 2025 JP Davalos</span>
+    </footer>
+  </body>
+</html>
