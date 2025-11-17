@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <title>JP Davalos - About</title>
     <link rel="stylesheet" href="styles/main.css" />
   </head>
@@ -66,103 +67,131 @@
         </article>
       </section>
 
-      <section class="education">
-        <h2>Education</h2>
-        <ol>
-          <li>
-            <b>UC San Diego</b> - B.S. Computer Science - <i>(2023 - 2027)</i>
-          </li>
-          <li>
-            <ul>
-              <li>Regent's Scholar</li>
-              <li>
-                Relevant Coursework: Data Structures and Algorithms, Software
-                Engineering, Computer Systems
-              </li>
-              <li>GPA: 3.75</li>
-            </ul>
-          </li>
+      <div
+        class="tabs-container"
+        style="
+          margin-bottom: 2rem;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+        "
+      >
+        <button
+          id="btn-education"
+          class="tab-btn active"
+          onclick="switchTab('education')"
+        >
+          Education
+        </button>
+        <button
+          id="btn-experience"
+          class="tab-btn"
+          onclick="switchTab('experience')"
+        >
+          Experience
+        </button>
+      </div>
 
-          <li><b>Turlock High School</b> - <i>(2019 - 2023)</i></li>
-          <li>
-            <ul>
-              <li>Rank 3/595</li>
-              <li>
-                AP Courses: Computer Science A, Calculus BC, Statistics and more
-              </li>
-              <li>GPA: 4.84</li>
-            </ul>
-          </li>
-        </ol>
-      </section>
+      <div class="tab-content">
+        <section class="education" id="education-section">
+          <h2>Education</h2>
+          <ol>
+            <li>
+              <b>UC San Diego</b> - B.S. Computer Science - <i>(2023 - 2027)</i>
+            </li>
+            <li>
+              <ul>
+                <li>Regent's Scholar</li>
+                <li>
+                  Relevant Coursework: Data Structures and Algorithms, Software
+                  Engineering, Computer Systems
+                </li>
+                <li>GPA: 3.75</li>
+              </ul>
+            </li>
 
-      <section class="experience">
-        <h2>Experience</h2>
-        <ol>
-          <li>
-            <b>Software and Data Engineering Researcher</b> -
-            <em>UC San Diego</em>
-          </li>
-          <li>
-            <ul>
-              <li>
-                Engineered a Python Selenium web scraping pipeline processing
-                <strong>1,044</strong> articulation agreements from
-                <strong>115 CCCs</strong>.
-              </li>
-              <li>
-                Developed a Python transfer pathway generator that validates
-                prerequisites and produces term-by-term schedules.
-              </li>
-              <li>
-                Optimized data pipelines to detect credit loss, prerequisite
-                bottlenecks, and articulation gaps, improving efficiency.
-              </li>
-            </ul>
-          </li>
+            <li><b>Turlock High School</b> - <i>(2019 - 2023)</i></li>
+            <li>
+              <ul>
+                <li>Rank 3/595</li>
+                <li>
+                  AP Courses: Computer Science A, Calculus BC, Statistics and
+                  more
+                </li>
+                <li>GPA: 4.84</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
 
-          <li><b>Software Engineering Intern</b> - <em>KSDT Radio</em></li>
-          <li>
-            <ul>
-              <li>
-                Rebuilt legacy PHP/HTML site in React and Node.js, cutting load
-                times by
-                <strong>40%</strong>
-                and improving maintainability.
-              </li>
-              <li>
-                Built responsive UI, integrated multimedia streaming, and
-                automated email workflows, boosting engagement
-                <strong>25%</strong>.
-              </li>
-              <li>
-                Collaborated with a team of interns to ensure timely project
-                completion
-              </li>
-            </ul>
-          </li>
+        <section class="experience" id="experience-section" hidden>
+          <h2>Experience</h2>
+          <ol>
+            <li>
+              <b>Software and Data Engineering Researcher</b> -
+              <em>UC San Diego</em>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  Engineered a Python Selenium web scraping pipeline processing
+                  <strong>1,044</strong> articulation agreements from
+                  <strong>115 CCCs</strong>.
+                </li>
+                <li>
+                  Developed a Python transfer pathway generator that validates
+                  prerequisites and produces term-by-term schedules.
+                </li>
+                <li>
+                  Optimized data pipelines to detect credit loss, prerequisite
+                  bottlenecks, and articulation gaps, improving efficiency.
+                </li>
+              </ul>
+            </li>
 
-          <li>
-            <b>Machine Learning Research Assistant</b> - <em>UC San Diego</em>
-          </li>
-          <li>
-            <ul>
-              <li>
-                Analyzed classification robustness using Python, comparing
-                Perceptron performance on incomplete data sets.
-              </li>
-              <li>
-                Developed scripts to simulate missing data sets, validating
-                model behavior and displaying performance metrics.
-              </li>
-              <li>
-                Automated data preprocessing and evaluation pipelines, reducing
-                manual workload and speeding up experiments.
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </section>
+            <li><b>Software Engineering Intern</b> - <em>KSDT Radio</em></li>
+            <li>
+              <ul>
+                <li>
+                  Rebuilt legacy PHP/HTML site in React and Node.js, cutting
+                  load times by
+                  <strong>40%</strong>
+                  and improving maintainability.
+                </li>
+                <li>
+                  Built responsive UI, integrated multimedia streaming, and
+                  automated email workflows, boosting engagement
+                  <strong>25%</strong>.
+                </li>
+                <li>
+                  Collaborated with a team of interns to ensure timely project
+                  completion
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <b>Machine Learning Research Assistant</b> - <em>UC San Diego</em>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  Analyzed classification robustness using Python, comparing
+                  Perceptron performance on incomplete data sets.
+                </li>
+                <li>
+                  Developed scripts to simulate missing data sets, validating
+                  model behavior and displaying performance metrics.
+                </li>
+                <li>
+                  Automated data preprocessing and evaluation pipelines,
+                  reducing manual workload and speeding up experiments.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
     </main>
 
     <footer>
@@ -209,6 +238,7 @@
       </dialog>
       <span>Copyright &copy; 2025 JP Davalos</span>
     </footer>
+    <script src="scripts/about.js"></script>
     <script src="scripts/theme.js"></script>
     <noscript>
       <span class="noscript-msg">Enable JavaScript for Dark Mode</span>

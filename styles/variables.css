@@ -71,21 +71,38 @@
 }
 
 body.dark-mode {
-  /* Backgrounds - Inverted for dark mode */
-  --color-bg: #121212; /* Very dark grey/black */
-  --color-bg-alt: #1f2937; /* Dark grey for cards/sections */
-  --color-bg-dark: #000000; /* Pure black for emphasis */
-  --color-bg-error: #450a0a; /* Dark red background for errors */
-  --color-bg-light: #374151; /* Dark grey for inputs */
+  /* Backgrounds */
+  --color-bg: #121212;
+  --color-bg-fallback: #1a1919;
 
-  /* Text - Lightened for contrast */
-  --color-text: #f3f4f6; /* Near white */
-  --color-text-light: #9ca3af; /* Light grey */
+  --color-bg-alt: #1f2937;
+  --color-bg-alt-fallback: #1c2533;
 
-  /* Primary Colors - Brightened slightly for visibility on dark bg */
-  --color-primary: #60a5fa; /* Lighter blue */
-  --color-secondary: #a78bfa; /* Lighter purple */
-  --color-error: #f87171; /* Lighter red */
+  --color-bg-dark: #000000;
+  --color-bg-dark-fallback: black;
+
+  --color-bg-error: #450a0a;
+  --color-bg-error-fallback: #5a0e0e;
+
+  --color-bg-light: #374151;
+  --color-bg-light-fallback: #4b5563;
+
+  /* Text */
+  --color-text: #f3f4f6;
+  --color-text-fallback: #e0e0e0;
+
+  --color-text-light: #9ca3af;
+  --color-text-light-fallback: #b0b0b0;
+
+  /* Primary Colors */
+  --color-primary: #60a5fa;
+  --color-primary-fallback: #3399ff;
+
+  --color-secondary: #a78bfa;
+  --color-secondary-fallback: #9966ff;
+
+  --color-error: #f87171;
+  --color-error-fallback: #ff6666;
 }
 
 /* =========================================

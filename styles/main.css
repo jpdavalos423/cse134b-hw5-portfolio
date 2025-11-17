@@ -500,6 +500,25 @@ section.experience {
   }
 }
 
+.tab-btn {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 2px solid var(--color-primary, var(--color-primary-fallback));
+  background: transparent;
+  color: var(--color-text, var(--color-text-fallback));
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background-color: var(--color-primary, var(--color-primary-fallback));
+  color: white;
+}
+
+.tab-btn:not(.active):hover {
+  background-color: var(--color-bg-alt, var(--color-bg-alt-fallback));
+}
+
 /* Projects Page */
 project-card {
   display: flex;
@@ -919,6 +938,14 @@ main:has(.project-detail) {
   100% {
     background-color: var(--color-bg, var(--color-bg-fallback));
   }
+}
+
+/* ============================================
+   VIEW TRANSITION API (Page Transitions)
+   ============================================ */
+
+::view-transition-group(root) {
+  animation-duration: 0.5s; /* Make it slightly slower to see clearly */
 }
 
 /* Stagger animation for project cards */
