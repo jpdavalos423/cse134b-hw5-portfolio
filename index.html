@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JP Davalos - Home</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><u><a href="./index.html">Home</a></u></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><label for="contact-toggle" class="navbar-contact-link">Contact</label></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <u><a href="./index.html">Home</a></u>
+          </li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li>
+            <label for="contact-toggle" class="navbar-contact-link"
+              >Contact</label
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <p>Hi there! My name is</p>
-        <h1>JP Davalos</h1>
-        <p>And I am a <u>software engineer</u></p>
-        <div class="link-wrapper">
-            <p><a href="./about.html">Learn more about me</a></p>
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-                  <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
-                </svg>
-            </div>
+      <p>Hi there! My name is</p>
+      <h1>JP Davalos</h1>
+      <p>And I am a <u>software engineer</u></p>
+      <div class="link-wrapper">
+        <p><a href="./about.html">Learn more about me</a></p>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+            <path
+              d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"
+            />
+          </svg>
         </div>
+      </div>
     </main>
     <footer>
-        <input type="checkbox" id="contact-toggle" class="contact-checkbox">
-        <dialog id="contactDialog">
-            <form method="post" action="/send-message">
-                <fieldset>
-                    <legend>Let's get in touch</legend>
+      <input type="checkbox" id="contact-toggle" class="contact-checkbox" />
+      <dialog id="contactDialog">
+        <form method="post" action="/send-message">
+          <fieldset>
+            <legend>Let's get in touch</legend>
 
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required />
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
-                        required></textarea>
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
 
-                    <div class="form-actions">
-                        <button type="submit">Send Message</button>
-                        <button type="button"
-                        >Cancel</button>
-                    </div>
-                </fieldset>
-            </form>
-        </dialog>
+            <div class="form-actions">
+              <button type="submit">Send Message</button>
+              <button type="button">Cancel</button>
+            </div>
+          </fieldset>
+        </form>
+      </dialog>
 
-        <span>Copyright &copy; 2025 JP Davalos</span>
+      <span>Copyright &copy; 2025 JP Davalos</span>
     </footer>
-</body>
-
+  </body>
 </html>

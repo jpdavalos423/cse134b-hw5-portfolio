@@ -261,7 +261,7 @@ input,
 textarea {
   width: 100%;
   padding: var(--spacing-xs) var(--spacing-sm);
-  border: 1px solid #d1d5db;
+  border: 2px solid var(--color-bg-light, var(--color-bg-light-fallback));
   border-radius: var(--radius-sm);
   font-size: var(--font-size-base);
   font-family: inherit;
@@ -291,7 +291,7 @@ label.required::after {
   display: flex;
   gap: var(--spacing-sm);
   justify-content: flex-end;
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-xs);
 }
 
 button {
@@ -800,6 +800,78 @@ main:has(.project-detail) {
   }
 }
 
+/* Contact Dialog */
+
+#message {
+  resize: none;
+  max-height: 12rem;
+  overflow: auto;
+}
+
+#progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-bg-light, var(--color-bg-light-fallback));
+  border-radius: 4px;
+  margin-top: var(--spacing-xs);
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-accent, var(--color-accent-fallback));
+  transition: width 0.2s ease, background-color 0.3s ease;
+}
+
+#error-output {
+  position: absolute;
+
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: var(--color-bg-error, var(--color-bg-error-fallback));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  pointer-events: none;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#error-output.visible {
+  opacity: 1;
+  top: 1.5rem;
+}
+
+#info-output {
+  display: block;
+  min-height: 1.5rem;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--color-error, var(--color-error-fallback));
+
+  visibility: hidden;
+}
+
+#info-output.visible {
+  visibility: visible;
+}
+
+.flash-error {
+  animation: flash 0.5s;
+  border: 2px solid var(--color-error, var(--color-error-fallback));
+}
+
 /* ============================================
    ANIMATIONS AND KEYFRAMES
    ============================================ */
@@ -832,6 +904,15 @@ main:has(.project-detail) {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: var(--color-bg-error, var(--color-bg-error-fallback));
+  }
+  100% {
+    background-color: var(--color-bg, var(--color-bg-fallback));
   }
 }
 
