@@ -207,7 +207,7 @@ dialog {
   z-index: 1000;
   border: none;
   padding: 0;
-
+  background-color: var(--color-bg, var(--color-bg-fallback));
   &:backdrop {
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -220,7 +220,7 @@ dialog {
 .button-as-label {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #f0f0f0;
+  background-color: var(--color-bg, var(--color-bg-fallback));
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
@@ -228,7 +228,7 @@ dialog {
   font-size: inherit;
 }
 .button-as-label:hover {
-  background-color: #e0e0e0;
+  background-color: var(--color-bg-alt, var(--color-bg-alt-fallback));
 }
 
 .navbar-contact-link {
@@ -240,6 +240,7 @@ fieldset {
   border: 2px solid var(--color-primary, var(--color-primary-fallback));
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
+  background-color: var(--color-bg, var(--color-bg-fallback));
 }
 
 legend {
@@ -265,6 +266,8 @@ textarea {
   font-family: inherit;
   margin-bottom: var(--spacing-sm);
   transition: border-color var(--transition-fast);
+  background-color: var(--color-bg-light, var(--color-bg-light-fallback));
+  color: var(--color-text, var(--color-text-fallback));
 
   &:focus {
     outline: none;
