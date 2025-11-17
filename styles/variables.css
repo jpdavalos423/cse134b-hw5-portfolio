@@ -69,3 +69,45 @@
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
 }
+
+body.dark-mode {
+  /* Backgrounds - Inverted for dark mode */
+  --color-bg: #121212; /* Very dark grey/black */
+  --color-bg-alt: #1f2937; /* Dark grey for cards/sections */
+  --color-bg-dark: #000000; /* Pure black for emphasis */
+  --color-bg-error: #450a0a; /* Dark red background for errors */
+  --color-bg-light: #374151; /* Dark grey for inputs */
+
+  /* Text - Lightened for contrast */
+  --color-text: #f3f4f6; /* Near white */
+  --color-text-light: #9ca3af; /* Light grey */
+
+  /* Primary Colors - Brightened slightly for visibility on dark bg */
+  --color-primary: #60a5fa; /* Lighter blue */
+  --color-secondary: #a78bfa; /* Lighter purple */
+  --color-error: #f87171; /* Lighter red */
+}
+
+/* =========================================
+   THEME TOGGLE BUTTON STYLING
+   ========================================= */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#theme-toggle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg); /* Inverts text color on hover */
+  transform: translateY(-2px);
+}

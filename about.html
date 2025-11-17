@@ -21,21 +21,26 @@
               >Contact</label
             >
           </li>
+          <li>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" hidden>
+              🌙 Dark Mode
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="hero">
         <picture>
-            <source
+          <source
             srcset="
               assets/profile-picture-200w.webp 200w,
               assets/profile-picture-250w.webp 250w
             "
             sizes="(max-width: 768px) 200px, 250px"
             type="image/webp"
-          >
-        
+          />
+
           <source
             srcset="
               assets/profile-picture-200w.jpg 200w,
@@ -43,12 +48,12 @@
             "
             sizes="(max-width: 768px) 200px, 250px"
             type="image/jpeg"
-          >
-        
+          />
+
           <img
             src="assets/profile-picture-250w.jpg"
             alt="A professional headshot of JP Davalos."
-          >
+          />
         </picture>
         <article>
           <h2>Who am I?</h2>
@@ -204,5 +209,9 @@
       </dialog>
       <span>Copyright &copy; 2025 JP Davalos</span>
     </footer>
+    <script src="scripts/theme.js"></script>
+    <noscript>
+      <span class="noscript-msg">Enable JavaScript for Dark Mode</span>
+    </noscript>
   </body>
 </html>
