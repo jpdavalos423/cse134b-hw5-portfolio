@@ -1,60 +1,65 @@
 /* CSS Variables*/
 :root {
-    /* Primary colors*/
-    --color-primary: #2563eb;
-    --color-primary-fallback: #0066cc;
-    
-    --color-secondary: #7c3aed;
-    --color-secondary-fallback: #6633cc;
-    
-    --color-accent: #10b981;
-    --color-accent-fallback: #00cc66;
-    
-    /* Neutral colors */
-    --color-text: #1f2937;
-    --color-text-fallback: #333333;
-    
-    --color-text-light: #6b7280;
-    --color-text-light-fallback: #666666;
-    
-    --color-bg: #ffffff;
-    --color-bg-fallback: white;
+  /* Primary colors*/
+  --color-primary: #2563eb;
+  --color-primary-fallback: #0066cc;
 
-    --color-bg-dark: #1f2937;
-    --color-bg-dark-fallback: #333333;
-    
-    --color-bg-alt: #f9fafb;
-    --color-bg-alt-fallback: #f5f5f5;
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;  /* 8px */
-    --spacing-sm: 1rem;    /* 16px */
-    --spacing-md: 1.5rem;  /* 24px */
-    --spacing-lg: 2rem;    /* 32px */
-    --spacing-xl: 3rem;    /* 48px */
-    --spacing-xxl: 4rem;   /* 64px */
-    
-    /* Font Sizes */
-    --font-size-base: 1rem;
-    --font-size-sm: 0.875rem;  /* 14px */
-    --font-size-lg: 1.125rem;  /* 18px */
-    --font-size-xl: 1.25rem;   /* 20px */
-    --font-size-2xl: 1.5rem;   /* 24px */
-    --font-size-3xl: 2rem;     /* 32px */
-    --font-size-4xl: 2.5rem;   /* 40px */
-    
-    /* Layout */
-    --header-height: 4rem;
-    --footer-height: auto;
-    
-    /* Transitions */
-    --transition-fast: 0.15s ease-in-out;
-    --transition-normal: 0.3s ease-in-out;
-    --transition-slow: 0.5s ease-in-out;
-    
-    /* Border radius */
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 1rem;
+  --color-secondary: #7c3aed;
+  --color-secondary-fallback: #6633cc;
+
+  --color-accent: #10b981;
+  --color-accent-fallback: #00cc66;
+
+  --color-error: #d93025;
+  --color-error-fallback: #cc0000;
+
+  /* Neutral colors */
+  --color-text: #1f2937;
+  --color-text-fallback: #333333;
+
+  --color-text-light: #6b7280;
+  --color-text-light-fallback: #666666;
+
+  --color-bg: #ffffff;
+  --color-bg-fallback: white;
+
+  --color-bg-dark: #1f2937;
+  --color-bg-dark-fallback: #333333;
+
+  --color-bg-alt: #f9fafb;
+  --color-bg-alt-fallback: #f5f5f5;
+
+  -color-bg-error: #fef7f7;
+  --color-bg-error-fallback: #ffe5e5;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 3rem; /* 48px */
+  --spacing-xxl: 4rem; /* 64px */
+
+  /* Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 2rem; /* 32px */
+  --font-size-4xl: 2.5rem; /* 40px */
+
+  /* Layout */
+  --header-height: 4rem;
+  --footer-height: auto;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
 }
-

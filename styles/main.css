@@ -274,6 +274,19 @@ textarea {
   }
 }
 
+input:user-invalid,
+textarea:user-invalid {
+  border-color: var(--color-error, var(--color-error-fallback));
+  border-width: 2px;
+  background-color: var(--color-bg-error, var(--color-bg-error-fallback));
+}
+
+label.required::after {
+  content: " *";
+  color: var(--color-error, var(--color-error-fallback));
+  margin-left: 2px;
+}
+
 .form-actions {
   display: flex;
   gap: var(--spacing-sm);
