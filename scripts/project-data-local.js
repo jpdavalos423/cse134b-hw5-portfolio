@@ -1,3 +1,5 @@
+console.log("project-data-local.js loaded");
+
 const LOCAL_PROJECT_DATA = [
   {
     title: "PokeCollect",
@@ -51,3 +53,7 @@ const LOCAL_PROJECT_DATA = [
     imageAlt: "A photo of the Now Playing Display running on a RaspberryPi.",
   },
 ];
+
+if (!localStorage.getItem("projectData")) {
+  localStorage.setItem("projectData", JSON.stringify(LOCAL_PROJECT_DATA));
+}
