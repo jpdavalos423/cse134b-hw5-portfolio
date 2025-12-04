@@ -1,5 +1,3 @@
-console.log("project-data-local.js loaded");
-
 const LOCAL_PROJECT_DATA = [
   {
     title: "PokeCollect",
