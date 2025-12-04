@@ -13,7 +13,7 @@ const LOCAL_PROJECT_DATA = [
       "Used Agile methodology for team collaboration",
       "Built with vanilla JavaScript and HTML/CSS",
     ],
-    image: "assets/pokecollect-preview-800w.jpg",
+    image: "assets/pokecollect-preview-800w.webp",
     imageAlt: "A screenshot of the PokeCollect application dashboard.",
   },
   {
@@ -30,7 +30,7 @@ const LOCAL_PROJECT_DATA = [
       "Built with React and D3.js for dynamic rendering",
       "Designed educational interface for learning",
     ],
-    image: "assets/algorithm-preview-800w.jpg",
+    image: "assets/algorithm-preview-800w.webp",
     imageAlt: "A screenshot of the DSA Visualizer sorting interface.",
   },
   {
@@ -47,7 +47,7 @@ const LOCAL_PROJECT_DATA = [
       "Created responsive UI for small screens",
       "Built with Python and Flask backend",
     ],
-    image: "assets/spotify-preview-800w.jpg",
+    image: "assets/spotify-preview-800w.webp",
     imageAlt: "A photo of the Now Playing Display running on a RaspberryPi.",
   },
 ];
