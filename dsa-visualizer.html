@@ -49,7 +49,7 @@
           <picture>
             <source
               srcset="
-                assets/algorithm-preview.webp      400w,
+                assets/algorithm-preview-400w.webp 400w,
                 assets/algorithm-preview-800w.webp 800w
               "
               sizes="(max-width: 600px) 400px, 800px"
@@ -76,19 +76,15 @@
           <section class="project-intro">
             <h2>About the Project</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              The Data Structures & Algorithms Visualizer is an interactive tool
+              built to help students understand how popular algorithms operate
+              internally. The project animates each algorithm step-by-step,
+              translating abstract logic into intuitive visual sequences.
             </p>
             <p>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-              unde omnis iste natus error sit voluptatem accusantium doloremque
-              laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              I created the visualizer to support computer science learners and
+              to deepen my own understanding of algorithmic behavior, recursion,
+              and performance.
             </p>
           </section>
 
@@ -96,69 +92,65 @@
             <h2>Key Features</h2>
             <ul>
               <li>
-                Implemented step-by-step visualization for sorting algorithms
+                Animations for sorting algorithms such as Merge Sort and Bubble
+                Sort
               </li>
-              <li>Added interactive controls for algorithm execution</li>
-              <li>Created visual representations of data structures</li>
-              <li>Built with React and D3.js for dynamic rendering</li>
-              <li>Designed educational interface for learning</li>
+              <li>Step, pause, and speed controls for interactive playback</li>
+              <li>
+                Visual highlighting of comparisons, swaps, and recursive calls
+              </li>
+              <li>
+                Built with React for UI management and D3.js for rendering
+              </li>
+              <li>Educational interface designed for clarity and engagement</li>
             </ul>
           </section>
 
           <section class="project-development">
             <h2>Development Process</h2>
             <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
+              The project started with designing a system to convert algorithm
+              operations into discrete visualization states. React handled UI
+              components, while D3 managed the animated SVG elements. User
+              testing helped determine ideal pacing, color choices, and control
+              layout.
             </p>
             <p>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam
-              corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-              consequatur? Quis autem vel eum iure reprehenderit qui in ea
-              voluptate velit esse quam nihil molestiae consequatur, vel illum
-              qui dolorem eum fugiat quo voluptas nulla pariatur?
+              This project strengthened my ability to combine algorithmic
+              reasoning with front-end engineering patterns.
             </p>
           </section>
 
           <section class="project-technical">
             <h2>Technical Implementation</h2>
             <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga.
+              Each algorithm is transformed into a sequence of recorded states,
+              which D3 animates through transitions. React manages user controls
+              and state changes, while D3 performs efficient DOM manipulation
+              and rendering.
             </p>
             <p>
-              Et harum quidem rerum facilis est et expedita distinctio. Nam
-              libero tempore, cum soluta nobis est eligendi optio cumque nihil
-              impedit quo minus id quod maxime placeat facere possimus, omnis
-              voluptas assumenda est, omnis dolor repellendus.
+              This separation ensures smooth animations and clean component
+              logic.
             </p>
           </section>
 
           <section class="project-challenges">
             <h2>Challenges & Solutions</h2>
             <p>
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-              molestiae non recusandae. Itaque earum rerum hic tenetur a
-              sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-              consequatur aut perferendis doloribus asperiores repellat.
+              Merge Sort posed challenges due to its recursive nature, requiring
+              a custom flattening approach to produce readable intermediate
+              frames. Balancing D3’s direct DOM manipulation with React’s
+              virtual DOM also required careful architectural choices.
             </p>
           </section>
 
           <section class="project-future">
             <h2>Future Enhancements</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Future expansions include heap visualizations, graph algorithms,
+              and pathfinding demos, along with exporting animations for
+              educational use.
             </p>
           </section>
         </section>

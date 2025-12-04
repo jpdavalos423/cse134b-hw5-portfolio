@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokeCollect - Project Details | JP Davalos</title>
+    <title>Portfolio Website - Project Details | JP Davalos</title>
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
@@ -34,18 +34,11 @@
       <article class="project-detail">
         <header class="project-detail-header">
           <a href="./projects.html" class="back-link">← Back to Projects</a>
-          <h1>PokeCollect</h1>
+          <h1>Portfolio Website</h1>
           <p class="project-meta">
-            <time datetime="2024">2024</time> •
-            <a
-              href="https://cse110-sp25-group20.github.io/cse110-sp25-group20/"
-              target="_blank"
-              >Live Site</a
-            >
-            •
-            <a
-              href="https://github.com/cse110-sp25-group20/Repo-of-Truth"
-              target="_blank"
+            <time datetime="2023">2023–2025</time> •
+            <a href="https://YOUR_LIVE_SITE_URL" target="_blank">Live Site</a> •
+            <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
               >GitHub Repo</a
             >
           </p>
@@ -55,108 +48,110 @@
           <picture>
             <source
               srcset="
-                assets/pokecollect-preview-400w.webp 400w,
-                assets/pokecollect-preview-800w.webp 800w
+                assets/portfolio-preview-400w.webp 400w,
+                assets/portfolio-preview-800w.webp 800w
               "
               sizes="(max-width: 600px) 400px, 800px"
               type="image/webp"
             />
-
             <source
               srcset="
-                assets/pokecollect-preview-400w.jpg 400w,
-                assets/pokecollect-preview-800w.jpg 800w
+                assets/portfolio-preview-400w.jpg 400w,
+                assets/portfolio-preview-800w.jpg 800w
               "
               sizes="(max-width: 600px) 400px, 800px"
               type="image/jpeg"
             />
-
             <img
-              src="assets/pokecollect-preview-800w.jpg"
-              alt="PokeCollect Project Preview showing the dashboard interface with various Pokemon cards displayed."
+              src="assets/portfolio-preview-800w.jpg"
+              alt="Preview of the personal portfolio website showing the homepage layout and project sections."
             />
           </picture>
         </figure>
 
         <section class="project-detail-content">
+          <!-- INTRO -->
           <section class="project-intro">
             <h2>About the Project</h2>
             <p>
-              PokeCollect is a web application designed to help collectors
-              track, manage, and explore their Pokémon TCG collections. The
-              project was developed as part of UCSD’s CSE 110 Software
-              Engineering course, where my team and I followed Agile
-              methodologies to plan sprints, refine features, and iterate on
-              design. Our goal was to build an easy-to-use interface that lets
-              collectors view card details, organize their personal collection,
-              and monitor market information in a visually engaging dashboard.
+              This portfolio website is my primary online presence and a
+              long-term project that evolves alongside my technical skills. I
+              built it from scratch using HTML, CSS, and JavaScript with an
+              emphasis on responsive design, performance, and clean information
+              architecture.
             </p>
             <p>
-              This project also served as my introduction to collaborative
-              software engineering. It strengthened my skills in communication,
-              version control workflows, and UI/UX design while working in a
-              multi-person team environment.
+              Over time, I refined the structure, incorporated modern layout
+              systems, improved accessibility, and established a consistent
+              design language that aligns with my personal branding.
             </p>
           </section>
 
+          <!-- FEATURES -->
           <section class="project-features">
             <h2>Key Features</h2>
             <ul>
-              <li>Integrated Pokémon TCG API for real-time card information</li>
-              <li>Collection management system using LocalStorage</li>
-              <li>Responsive, mobile-friendly dashboard layout</li>
-              <li>Team-oriented development using Agile methodologies</li>
-              <li>Built with vanilla JavaScript, HTML, and CSS</li>
+              <li>Custom multi-page navigation system</li>
+              <li>Clean, responsive UI supporting all screen sizes</li>
+              <li>Consistent theme and CSS variable-based styling</li>
+              <li>Semantic HTML and organized project structure</li>
+              <li>Lightweight JavaScript for interactivity and dark mode</li>
             </ul>
           </section>
 
+          <!-- DEVELOPMENT -->
           <section class="project-development">
             <h2>Development Process</h2>
             <p>
-              Our team began by writing user stories and organizing them into
-              sprint cycles. I focused primarily on UI structure, component
-              design, and ensuring a smooth API integration pipeline. We used
-              code reviews, usability testing, and iterative feedback to refine
-              the dashboard layout and feature set.
+              The portfolio began as a simple single-page layout but gradually
+              expanded as I learned more about design patterns, usability, and
+              responsive interfaces. I iterated on wireframes, tested multiple
+              navigation styles, and reworked the layout several times based on
+              feedback and modern best practices.
             </p>
             <p>
-              Through this process, I gained experience with version control
-              workflows, team communication strategies, and translating user
-              needs into technical implementations.
+              This project served as a training ground for developing
+              maintainable CSS, structuring files cleanly, and writing
+              accessible markup.
             </p>
           </section>
 
+          <!-- TECHNICAL -->
           <section class="project-technical">
             <h2>Technical Implementation</h2>
             <p>
-              The project fetches structured JSON card data from the Pokémon TCG
-              API, dynamically populating UI components using JavaScript.
-              LocalStorage handles collection state persistence, allowing users
-              to revisit their saved cards without a backend.
+              The site uses CSS Grid and Flexbox for layout, CSS variables for
+              theming, and a modular file structure separating images, scripts,
+              and styles. The dark mode toggle is implemented using a simple
+              JavaScript controller that stores user preferences in
+              LocalStorage.
             </p>
             <p>
-              The interface uses CSS Grid and Flexbox for responsive layout, and
-              the image system employs responsive sources to improve loading
-              performance.
+              To optimize load time, image assets include responsive sources,
+              minimized file sizes, and careful caching behavior.
             </p>
           </section>
 
+          <!-- CHALLENGES -->
           <section class="project-challenges">
             <h2>Challenges & Solutions</h2>
             <p>
-              Managing inconsistent API fields required robust fallback logic to
-              ensure the UI could gracefully handle missing attributes.
-              Coordination across team branches also involved careful merge
-              practices and consistent styling conventions.
+              The hardest part of the project was developing a visual style that
+              felt cohesive and professional without relying on frameworks or
+              templates. Through iterative redesigns, experimentation with
+              layout systems, and improved typography choices, I created a style
+              that shows personality while maintaining clarity.
             </p>
           </section>
 
+          <!-- FUTURE -->
           <section class="project-future">
             <h2>Future Enhancements</h2>
             <p>
-              Planned upgrades include cloud-synced collections, advanced
-              filtering and sorting options, and price history charts for card
-              valuation.
+              Planned improvements include a blog section, animated section
+              transitions, interactive filtering for projects, and potentially a
+              rebuild using Astro or Next.js for more advanced routing and
+              component abstractions.
             </p>
           </section>
         </section>
@@ -205,8 +200,10 @@
           </fieldset>
         </form>
       </dialog>
-      <span>Copyright &copy; 2025 JP Davalos</span>
+
+      <span>Copyright © 2025 JP Davalos</span>
     </footer>
+
     <script src="scripts/theme.js"></script>
     <noscript>
       <span class="noscript-msg">Enable JavaScript for Dark Mode</span>

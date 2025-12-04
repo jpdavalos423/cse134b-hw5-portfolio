@@ -76,87 +76,72 @@
           <section class="project-intro">
             <h2>About the Project</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Now Playing Display is a lightweight music information interface
+              built for Raspberry Pi devices. It retrieves real-time Spotify
+              playback data and presents it on a dedicated display, functioning
+              like a compact smart music dashboard.
             </p>
             <p>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-              unde omnis iste natus error sit voluptatem accusantium doloremque
-              laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              The project combines embedded hardware, API communication, and
+              minimalist UI design to create an elegant and functional display.
             </p>
           </section>
 
           <section class="project-features">
             <h2>Key Features</h2>
             <ul>
-              <li>Integrated Spotify Web API for real-time playback data</li>
-              <li>Implemented OAuth authentication flow</li>
-              <li>Optimized for RaspberryPi display performance</li>
-              <li>Created responsive UI for small screens</li>
-              <li>Built with Python and Flask backend</li>
+              <li>Real-time Spotify playback data using the Spotify Web API</li>
+              <li>OAuth authentication system with token refresh handling</li>
+              <li>Optimized layout for small or low-power screens</li>
+              <li>Backend logic built with Python and Flask</li>
+              <li>Clean and minimalist UI focused on readability</li>
             </ul>
           </section>
 
           <section class="project-development">
             <h2>Development Process</h2>
             <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
+              Development began with testing OAuth flows and creating a stable
+              polling mechanism for updating track metadata. Several UI
+              prototypes were explored before landing on a minimal layout
+              optimized for distance visibility.
             </p>
             <p>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam
-              corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-              consequatur? Quis autem vel eum iure reprehenderit qui in ea
-              voluptate velit esse quam nihil molestiae consequatur, vel illum
-              qui dolorem eum fugiat quo voluptas nulla pariatur?
+              Flask serves dynamically-rendered templates, while CSS ensures
+              proper scaling across various screen sizes.
             </p>
           </section>
 
           <section class="project-technical">
             <h2>Technical Implementation</h2>
             <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga.
+              The display queries Spotify at set intervals, parses JSON
+              metadata, and updates album art, track name, and artist
+              information. Responsive design techniques allow the interface to
+              adapt smoothly to a Raspberry Pi display.
             </p>
             <p>
-              Et harum quidem rerum facilis est et expedita distinctio. Nam
-              libero tempore, cum soluta nobis est eligendi optio cumque nihil
-              impedit quo minus id quod maxime placeat facere possimus, omnis
-              voluptas assumenda est, omnis dolor repellendus.
+              Caching and efficient update logic reduce API usage and improve
+              performance.
             </p>
           </section>
 
           <section class="project-challenges">
             <h2>Challenges & Solutions</h2>
             <p>
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-              molestiae non recusandae. Itaque earum rerum hic tenetur a
-              sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-              consequatur aut perferendis doloribus asperiores repellat.
+              Managing OAuth refresh tokens was a major challenge due to strict
+              expiration rules. Implementing automatic token renewal and error
+              recovery ensured the system remained stable during extended
+              playback sessions.
             </p>
           </section>
 
           <section class="project-future">
             <h2>Future Enhancements</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Planned improvements include animated visualizers, multi-platform
+              support, and additional metrics such as listening history or track
+              popularity.
             </p>
           </section>
         </section>
