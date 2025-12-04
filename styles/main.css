@@ -519,6 +519,29 @@ section.experience {
   background-color: var(--color-bg-alt, var(--color-bg-alt-fallback));
 }
 
+section.project-controls {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+
+  & button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--color-primary, var(--color-primary-fallback));
+    background-color: transparent;
+    color: var(--color-primary, var(--color-primary-fallback));
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:hover {
+      background-color: var(--color-primary, var(--color-primary-fallback));
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+}
+
 /* Projects Page */
 project-card {
   display: flex;

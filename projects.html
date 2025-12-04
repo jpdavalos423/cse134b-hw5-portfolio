@@ -34,102 +34,12 @@
       <article>
         <h2>My Work</h2>
 
-        <project-card
-          detail-url="pokecollect.html"
-          title="PokeCollect"
-          description="A Pokemon card collection tracker that allows users to manage their collection, view card details, and view market prices. Developed as a team using Agile principles and integrates with the Pokemon TCG API.
-        "
-          live-url="https://cse110-sp25-group20.github.io/cse110-sp25-group20/"
-          repo-url="https://github.com/cse110-sp25-group20/Repo-of-Truth"
-          details="Integrated Pokemon TCG API for real-time card data; Implemented collection management features with local storage; Developed responsive UI with modern design principles; Used Agile methodology for team collaboration; Built with vanilla JavaScript and HTML/CSS"
-        >
-          <picture slot="project-image">
-            <source
-              srcset="
-                assets/pokecollect-preview-400w.webp 400w,
-                assets/pokecollect-preview-800w.webp 800w
-              "
-              sizes="(max-width: 640px) 400px, (max-width: 968px) 600px, 500px"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                assets/pokecollect-preview-400w.jpg 400w,
-                assets/pokecollect-preview-800w.jpg 800w
-              "
-              sizes="(max-width: 640px) 400px, (max-width: 968px) 600px, 500px"
-              type="image/jpeg"
-            />
-            <img
-              src="assets/pokecollect-preview-800w.jpg"
-              alt="A screenshot of the PokeCollect application dashboard."
-            />
-          </picture>
-        </project-card>
+        <section class="project-controls">
+          <button id="load-local">Load Local</button>
+          <button id="load-remote">Load Remote</button>
+        </section>
 
-        <project-card
-          detail-url="dsa-visualizer.html"
-          title="DSA Visualizer"
-          description="Developing an interactive tool to help students learn data structures and algorithms through step-by-step visuals. Includes algorithms such as Bubble Sort and Merge Sort and includes various data structures.
-"
-          repo-url="https://github.com/jpdavalos423/sorting-algorithms"
-          details="Implemented step-by-step visualization for sorting algorithms; Added interactive controls for algorithm execution; Created visual representations of data structures; Built with React and D3.js for dynamic rendering; Designed educational interface for learning"
-        >
-          <picture slot="project-image">
-            <source
-              srcset="
-                assets/algorithm-preview-400w.webp 400w,
-                assets/algorithm-preview-800w.webp 800w
-              "
-              sizes="(max-width: 640px) 400px, (max-width: 968px) 600px, 500px"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                assets/algorithm-preview-400w.jpg 400w,
-                assets/algorithm-preview-800w.jpg 800w
-              "
-              sizes="(max-width: 640px) 400px, (max-width: 968px) 600px, 500px"
-              type="image/jpeg"
-            />
-            <img
-              src="assets/algorithm-preview-800w.jpg"
-              alt="A screenshot of the DSA Visualizer sorting interface."
-            />
-          </picture>
-        </project-card>
-
-        <project-card
-          detail-url="now-playing.html"
-          title="Now Playing Display"
-          description="Real time display of currently playing song specifically optimized to display on RaspberryPi. Uses Spotify API to fetch user information and handles authentication process.
-"
-          repo-url="https://github.com/jpdavalos423/spotify-now-playing"
-          details="Integrated Spotify Web API for real-time playback data; Implemented OAuth authentication flow; Optimized for RaspberryPi display performance; Created responsive UI for small screens; Built with Python and Flask backend"
-        >
-          <picture slot="project-image">
-            <source
-              srcset="
-                assets/spotify-preview-400w.webp 400w,
-                assets/spotify-preview-800w.webp 800w
-              "
-              sizes="(max-width: 640px) 400px, (max-width: 968px) 600px, 500px"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                assets/spotify-preview-400w.jpg 400w,
-                assets/spotify-preview-800w.jpg 800w
-              "
-              sizes="(max-width: 640px) 400px, (max-width: 968px) 600px, 500px"
-              type="image/jpeg"
-            />
-            <img
-              src="assets/spotify-preview-800w.jpg"
-              alt="A photo of the Now Playing Display running on a RaspberryPi."
-            />
-          </picture>
-        </project-card>
+        <section id="project-container"></section>
       </article>
     </main>
 
@@ -178,68 +88,10 @@
       <span>Copyright &copy; 2025 JP Davalos</span>
     </footer>
 
-    <script>
-      class ProjectCard extends HTMLElement {
-        connectedCallback() {
-          const pictureElement = this.querySelector(
-            'picture[slot="project-image"]'
-          );
-
-          const detailUrl = this.getAttribute("detail-url");
-          const title = this.getAttribute("title") || "Untitled Project";
-          const description = this.getAttribute("description") || "";
-
-          const liveUrl = this.getAttribute("live-url") || "#";
-          const repoUrl = this.getAttribute("repo-url") || "#";
-          const details = this.getAttribute("details") || "";
-
-          // Parse details into bullet points (semicolon-separated)
-          const detailsList = details
-            ? details
-                .split(";")
-                .map((d) => d.trim())
-                .filter((d) => d)
-            : [];
-
-          const detailsHTML =
-            detailsList.length > 0
-              ? `
-                  <div class="project-details" onclick="if(event.target.tagName !== 'A' && !event.target.closest('a')) window.location.href='${detailUrl}'">
-                    <ul class="details-list">
-                      ${detailsList
-                        .map((detail) => `<li>${detail}</li>`)
-                        .join("")}
-                    </ul>
-                  </div>
-                `
-              : "";
-
-          this.innerHTML = `
-              <div class="project-card-main" onclick="if(event.target.tagName !== 'A' && !event.target.closest('a')) window.location.href='${detailUrl}'">
-                
-                <section class="project-content">
-                  <h3>${title}</h3>
-                  <p>${description}</p>
-                  <div class="project-links">
-                    <a href="${liveUrl}" aria-label="Link to live site">Live Site</a>
-                    <a href="${repoUrl}" aria-label="Link to GitHub repo">GitHub Repo</a>
-                  </div>
-                </section>
-              </div>
-              ${detailsHTML}
-          `;
-
-          const mainCard = this.querySelector(".project-card-main");
-
-          if (mainCard && pictureElement) {
-            mainCard.prepend(pictureElement);
-          }
-        }
-      }
-
-      customElements.define("project-card", ProjectCard);
-    </script>
+    <script src="scripts/project-card.js"></script>
     <script src="scripts/theme.js"></script>
+    <script src="scripts/project-data-local.js"></script>
+    <script src="scripts/project-loader.js"></script>
     <noscript>
       <span class="noscript-msg">Enable JavaScript for Dark Mode</span>
     </noscript>
