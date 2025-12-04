@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Editor</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li>
+            <u><a href="./projects.html">Projects</a></u>
+          </li>
+          <li>
+            <label for="contact-toggle" class="navbar-contact-link"
+              >Contact</label
+            >
+          </li>
+          <li>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" hidden>
+              🌙 Dark Mode
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h2>CRUD Editor</h2>
+
+    <section>
+      <h3>Create / Update Project</h3>
+      <form id="crud-form">
+        <label>Project Index (for updating):</label>
+        <input
+          id="project-index"
+          type="number"
+          placeholder="Leave blank to create"
+        />
+
+        <label>Title:</label>
+        <input id="title" required />
+
+        <label>Description:</label>
+        <textarea id="description" required></textarea>
+
+        <label>Detail URL:</label>
+        <input id="detailUrl" required />
+
+        <label>Live URL:</label>
+        <input id="liveUrl" />
+
+        <label>Repo URL:</label>
+        <input id="repoUrl" />
+
+        <label>Details (semicolon separated):</label>
+        <textarea
+          id="details"
+          placeholder="Bullet1; Bullet2; Bullet3"
+        ></textarea>
+
+        <label>Image path:</label>
+        <input id="image" required />
+
+        <label>Image alt text:</label>
+        <input id="imageAlt" required />
+
+        <button type="submit">Save Project</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Delete Project</h3>
+      <label>Project Index to Delete:</label>
+      <input id="delete-index" type="number" />
+      <button id="delete-btn">Delete</button>
+    </section>
+
+    <section>
+      <h3>Current LocalStorage Data</h3>
+      <pre id="current-data"></pre>
+    </section>
+
+    <script src="scripts/crud.js"></script>
+    <script src="scripts/theme.js"></script>
+  </body>
+</html>
