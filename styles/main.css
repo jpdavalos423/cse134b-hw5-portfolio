@@ -207,8 +207,9 @@ dialog {
   transform: translate(-50%, -50%);
   z-index: 1000;
   border: none;
-  padding: 0;
+  padding: 0 var(--spacing-xs) var(--spacing-xs) var(--spacing-xs);
   background-color: var(--color-bg, var(--color-bg-fallback));
+  border-radius: var(--radius-md);
 }
 
 dialog::backdrop {
