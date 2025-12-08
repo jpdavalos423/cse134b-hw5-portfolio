@@ -39,37 +39,8 @@ function initFormHandlers(root = document) {
       });
     }
 
-    if (messageInput && progressBar) {
-      messageInput.addEventListener("input", () => {
-        const maxLength = parseInt(
-          messageInput.getAttribute("maxlength") || "0",
-          10
-        );
-        if (!maxLength) return;
-        const currentLength = messageInput.value.length;
-        const percentage = (currentLength / maxLength) * 100;
-        const remaining = maxLength - currentLength;
-
-        progressBar.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
-
-        if (percentage <= 60) {
-          progressBar.style.background =
-            "var(--color-accent, var(--color-accent-fallback))";
-          infoOutput?.classList.remove("visible");
-        } else if (percentage > 60 && percentage < 85) {
-          progressBar.style.background =
-            "var(--color-warning, var(--color-warning-fallback))";
-          infoOutput?.classList.remove("visible");
-        } else {
-          progressBar.style.background =
-            "var(--color-error, var(--color-error-fallback))";
-          if (infoOutput) {
-            infoOutput.textContent = `${remaining} characters left`;
-            infoOutput.classList.add("visible");
-          }
-        }
-      });
-    }
+    // Progress handling moved into the contact-dialog component to avoid
+    // load-order issues when the form is dynamically inserted.
 
     [nameInput, emailInput, messageInput].forEach((input) => {
       if (!input) return;

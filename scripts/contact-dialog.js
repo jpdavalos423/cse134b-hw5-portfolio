@@ -82,6 +82,44 @@ class ContactForm extends HTMLElement {
       });
     });
 
+    // Progress bar handling scoped to this component
+    const messageInput = this.querySelector("#message");
+    const progressBar = this.querySelector("#progress-bar");
+    const infoOutput = this.querySelector("#info-output");
+    const errorOutput = this.querySelector("#error-output");
+
+    if (messageInput && progressBar) {
+      messageInput.addEventListener("input", () => {
+        const maxLength = parseInt(
+          messageInput.getAttribute("maxlength") || "0",
+          10
+        );
+        if (!maxLength) return;
+        const currentLength = messageInput.value.length;
+        const percentage = (currentLength / maxLength) * 100;
+        const remaining = maxLength - currentLength;
+
+        progressBar.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+
+        if (percentage <= 60) {
+          progressBar.style.background =
+            "var(--color-accent, var(--color-accent-fallback))";
+          infoOutput?.classList.remove("visible");
+        } else if (percentage > 60 && percentage < 85) {
+          progressBar.style.background =
+            "var(--color-warning, var(--color-warning-fallback))";
+          infoOutput?.classList.remove("visible");
+        } else {
+          progressBar.style.background =
+            "var(--color-error, var(--color-error-fallback))";
+          if (infoOutput) {
+            infoOutput.textContent = `${remaining} characters left`;
+            infoOutput.classList.add("visible");
+          }
+        }
+      });
+    }
+
     // Remove blur class when dialog closes (or is cancelled)
     dialog.addEventListener("close", () =>
       document.body.classList.remove("dialog-open")
